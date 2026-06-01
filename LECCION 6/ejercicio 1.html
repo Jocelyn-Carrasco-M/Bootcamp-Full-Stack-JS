@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title> Ejercicio JQuery</title>
+        <script src="./js/jquery-4.0.0.min.js"></script>
+    </head>
+    <body>
+        <h1>Saludo con JQuery</h1>
+        <input type="text" id="nombre" placeholder="Ingrese su nombre">
+        <button id="btnSaludar">Saludar</button>
+        <span id= "mensaje"></span>
+
+        <script>
+            $("#btnSaludar").click(
+                function () {
+                    //Recupero los datos desde los input
+                    let nombre= $("#nombre").val();
+                
+                    //Muestro el resultado en el párrafo
+                    $("#mensaje").text("Hola " + nombre);
+                }
+            );
+        </script>
+
+    </body>
+</html>
