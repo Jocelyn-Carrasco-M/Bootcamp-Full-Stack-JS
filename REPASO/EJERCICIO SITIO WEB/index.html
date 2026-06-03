@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Conversión Celsius a Fahrenheit</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="bg-primary text-white py-4 shadow-sm">
+            <div class="container">
+                <h1 class="h3 mb-0 fw-semibold">
+                    Conversión de Temperaturas
+                </h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="row g-0">
+
+            <aside class="col-md-3 col-lg-2">
+                <nav class="bg-light border-end min-vh-100 p-3">
+                    <h6 class="text-uppercase text-secondary mb-3">
+                        Menú
+                    </h6>
+
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link active">
+                                Celsius a Fahrenheit
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="FaK.html" class="nav-link">
+                                Fahrenheit a Kelvin
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="KaC.html" class="nav-link">
+                                Kelvin a Celsius
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <section class="col-md-9 col-lg-10">
+                <div class="container py-4">
+
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body p-4">
+
+                            <h2 class="mb-4 text-primary">
+                                Celsius a Fahrenheit
+                            </h2>
+
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">
+                                    Grados Celsius:
+                                </label>
+
+                                <input type="number"
+                                    id="temperatura"
+                                    class="form-control"
+                                    placeholder="Ingrese grados Celsius">
+                            </div>
+
+                            <div class="alert alert-light border mb-3">
+                                <strong>Resultado:</strong>
+                                <span id="resultado"></span>
+                            </div>
+
+                            <div class="text-end">
+                                <button class="btn btn-primary px-4"
+                                    onclick="convertir();">
+                                    Convertir
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script>
+        function convertir() {
+
+            let celsius = Number(
+                document.getElementById("temperatura").value
+            );
+
+            let fahrenheit = (celsius * 9 / 5) + 32;
+
+            document.getElementById("resultado").textContent =
+                fahrenheit.toFixed(2) + " °F";
+        }
+    </script>
+
+</body>
+
+</html>

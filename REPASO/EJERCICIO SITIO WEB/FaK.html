@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Conversión Fahrenheit a Kelvin</title>
+    </head>
+
+    <body>
+
+        <h1>Conversión de Temperaturas</h1>
+
+        <h2>Fahrenheit a Kelvin</h2>
+
+            <label>Ingrese grados Fahrenheit:</label>
+            <input type="number" id="temperatura">
+
+            <br><br>
+
+                <button onclick="convertir();">
+                Convertir
+                </button>
+
+            <p>
+                Resultado:
+                <span id="resultado"></span>
+                </p>
+
+         <script>
+            function convertir() {
+                let fahrenheit =
+                Number(document.getElementById("temperatura").value);
+
+                let kelvin =
+                (fahrenheit - 32) * 5 / 9 + 273.15;
+
+    document.getElementById("resultado").textContent =
+        kelvin.toFixed(2) + " K";
+}
+
+    </script>
+
+</body>
+</html>
