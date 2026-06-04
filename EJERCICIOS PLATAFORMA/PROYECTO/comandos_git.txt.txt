@@ -1,0 +1,20 @@
+git --version	Muestra la versión instalada de Git
+		git version 2.54.0.windows.1
+
+git init	Inicializa un repositorio en la carpeta actual	
+		Initialized empty Git repository in C:/BOOTCAM JS/JAVASCRIPT/MODULO 3/.git/
+
+git add		Agrega cambios al área de preparación (staging)	git add . (agrega todos los archivos)
+		
+
+git commit	Registra los cambios con un mensaje descriptivo	git commit -m "Primer commit"
+		[master (root-commit) 61945d2] Primer commit
+ 		2 files changed, 115 insertions(+)
+ 		create mode 100644 EJERCICIO 1/index.html
+ 		create mode 100644 LECCION 1/index.html
+
+git status	Muestra el estado del repositorio	git status
+		On branch main
+		Your branch is up to date with 'origin/main'.
+
+		nothing to commit, working tree clean
